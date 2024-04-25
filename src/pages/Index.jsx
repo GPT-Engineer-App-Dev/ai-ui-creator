@@ -117,8 +117,8 @@ const TicTacToe = () => {
             />
           </AspectRatio>
         </Box>
-        </Flex>
-        <TicTacToe />
+      </Flex>
+      <TicTacToe />
     </Container>
   );
 };
