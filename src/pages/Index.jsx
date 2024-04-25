@@ -1,4 +1,4 @@
-import { Box, Button, Container, Heading, Text, VStack, Input, useToast } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Text, VStack, Input, useToast, Flex, AspectRatio, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { FaBrain, FaCode, FaLightbulb } from "react-icons/fa";
 
 const Index = () => {
@@ -26,8 +26,10 @@ const Index = () => {
   };
 
   return (
-    <Container maxW="container.xl">
-      <VStack spacing={8} py={10}>
+    <Container maxW="container.xl" overflow="hidden">
+      <Flex direction={{ base: "column", md: "row" }} justify="space-between" py={10}>
+        <Box flex="1" mr={8}>
+          <VStack spacing={8}>
         <Heading as="h1" size="2xl" textAlign="center">
           AI Software Engineer Command Center
         </Heading>
@@ -44,8 +46,23 @@ const Index = () => {
               Get AI Suggestions
             </Button>
           </VStack>
+          </Box>
+        <Box flex="1">
+          <InputGroup size="md" mb={4}>
+            <Input pr="4.5rem" type="text" placeholder="Enter URL here..." />
+            <InputRightElement width="4.5rem">
+              <Button h="1.75rem" size="sm">Go</Button>
+            </InputRightElement>
+          </InputGroup>
+          <AspectRatio ratio={16 / 9}>
+            <iframe
+              title="External Site"
+              src="https://example.com"
+              allowFullScreen
+            />
+          </AspectRatio>
         </Box>
-      </VStack>
+      </Flex>
     </Container>
   );
 };
