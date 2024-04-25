@@ -1,4 +1,5 @@
-import { useState, Box, Button, Container, Heading, Text, VStack, Input, useToast, Flex, AspectRatio, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Text, VStack, Input, useToast, Flex, AspectRatio, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { useState } from 'react';
 import { FaBrain, FaCode, FaLightbulb } from "react-icons/fa";
 
 const Index = () => {
