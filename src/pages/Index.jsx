@@ -1,6 +1,6 @@
 import { Box, Button, Container, Heading, Text, VStack, Input, useToast, Flex, AspectRatio, InputGroup, InputRightElement } from "@chakra-ui/react";
-import { useState, useEffect } from 'react';
-import { FaBrain, FaCode, FaLightbulb, FaPlay } from "react-icons/fa";
+import { useState } from 'react';
+import { FaCode, FaLightbulb } from "react-icons/fa";
 
 const calculateWinner = (squares) => {
   const lines = [
@@ -53,6 +53,8 @@ const TicTacToe = () => {
     </VStack>
   );
 };
+
+const Index = () => {
   const toast = useToast();
   const [url, setUrl] = useState('https://example.com');
   const [iframeUrl, setIframeUrl] = useState(url);
