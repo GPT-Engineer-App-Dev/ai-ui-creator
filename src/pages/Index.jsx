@@ -1,8 +1,11 @@
 import { Box, Button, Container, Heading, Text, VStack, Input, useToast, Flex, AspectRatio, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { useState } from 'react';
 import { FaBrain, FaCode, FaLightbulb } from "react-icons/fa";
 
 const Index = () => {
   const toast = useToast();
+  const [url, setUrl] = useState('https://example.com');
+  const [iframeUrl, setIframeUrl] = useState(url);
 
   const handleCodeAnalysis = () => {
     toast({
@@ -51,15 +54,15 @@ const Index = () => {
         </Box>
         <Box flex="1">
           <InputGroup size="md" mb={4}>
-            <Input pr="4.5rem" type="text" placeholder="Enter URL here..." />
+            <Input pr="4.5rem" type="text" placeholder="Enter URL here..." value={url} onChange={(e) => setUrl(e.target.value)} />
             <InputRightElement width="4.5rem">
-              <Button h="1.75rem" size="sm">Go</Button>
+              <Button h="1.75rem" size="sm" onClick={() => setIframeUrl(url)}>Go</Button>
             </InputRightElement>
           </InputGroup>
           <AspectRatio ratio={16 / 9}>
             <iframe
               title="External Site"
-              src="https://example.com"
+              src={iframeUrl}
               allowFullScreen
             />
           </AspectRatio>
