@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Flex, Link, Box } from '@chakra-ui/react';
 import { FaHome, FaUser } from 'react-icons/fa';
 import Index from "./pages/Index.jsx";
+import Settings from './pages/Settings.jsx';
 
 function App() {
   const Navbar = () => (
@@ -20,6 +21,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Index />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Router>
   );
