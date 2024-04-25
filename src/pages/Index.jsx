@@ -64,8 +64,7 @@ const Index = () => {
             />
           </AspectRatio>
         </Box>
-        </Box>
-      </Flex>
+        </Flex>
     </Container>
   );
 };
